@@ -17,11 +17,11 @@ public class QueryProcessor {
             return "V";
         } else if (query.contains("plus")) {
             String[] numbers = query.split(" ");
-            int result = Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[2]);
+            int result = Integer.parseInt(numbers[3]) + Integer.parseInt(numbers[5]);
             return String.valueOf(result);
         } else if (query.contains("largest")) {
             String[] numbers = query.split(":");
-            String[] numbers1 = numbers[1].split(",");
+            String[] numbers1 = numbers[2].split(",");
             int[] numbers2 = new int[numbers1.length];
             for (int i = 0; i < numbers1.length; i++) {
                 numbers2[i] = Integer.parseInt(numbers1[i]);
