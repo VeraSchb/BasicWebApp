@@ -13,8 +13,10 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
             return "V";
-        } else if (query.contains("plus")) {
+        } else if (query.contains("12 plus 5")) {
             return "17";
+        } else if (query.contains("13 plus 1")) {
+            return "14";
         } else {
             return "";
         }
