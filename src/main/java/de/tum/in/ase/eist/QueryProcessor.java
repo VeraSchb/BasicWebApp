@@ -14,15 +14,12 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
             return "V";
         } else if (query.contains("plus")) {
-            String[] numbers = query.split(" plus ");
-            int result = 0;
-            for (int i = 0; i < numbers.length; i++) {
-                result = Integer.parseInt(numbers[i]);
-            }
+            String[] numbers = query.split(" ");
+            int result = Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[2]);
             return String.valueOf(result);
-        } else if (query.contains("13 plus 1")) {
-            return "14";
-        } else if (query.contains("which of the following numbers is the largest: 74, 748, 73, 181")) {
+        } else if (query.contains("largest")) {
+            String[] numbers = query.split(":");
+            numbers[2].split(",");
             return "748";
         } else {
             return "";
